@@ -1,18 +1,18 @@
 {
-  "name": "dirty-chai",
-  "version": "2.0.1",
-  "description": "Extends Chai with lint-friendly terminating assertions.",
-  "main": "./lib/dirty-chai.js",
+  "name": "chai-parentheses",
+  "version": "0.0.1",
+  "description": "Extends Chai with lint-friendly terminating assertions",
+  "main": "./lib/index.js",
   "scripts": {
     "lint": "standard",
     "test": "run-s test:*",
     "test:node": "mocha",
-    "test:chrome": "pw-test test/dirty-chai.spec.js",
-    "test:firefox": "pw-test test/dirty-chai.spec.js -b firefox"
+    "test:chrome": "pw-test test/index.spec.js",
+    "test:firefox": "pw-test test/index.spec.js -b firefox"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/prodatakey/dirty-chai"
+    "url": "https://github.com/achingbrain/dirty-chai"
   },
   "keywords": [
     "chai",
@@ -20,12 +20,12 @@
     "browser",
     "testing"
   ],
-  "author": "Joshua Perry <josh@pdk.io>",
+  "author": "Alex Potsides <alex@achingbrain.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/prodatakey/dirty-chai/issues"
+    "url": "https://github.com/achingbrain/dirty-chai/issues"
   },
-  "homepage": "https://github.com/prodatakey/dirty-chai",
+  "homepage": "https://github.com/achingbrain/dirty-chai",
   "devDependencies": {
     "chai": "^4.0.0",
     "chai-as-promised": "^7.0.0",

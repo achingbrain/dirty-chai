@@ -7,7 +7,7 @@ const expect = chai.expect
 chai.should()
 
 chai.use(require('chai-as-promised'))
-chai.use(require('../lib/dirty-chai'))
+chai.use(require('../lib'))
 
 function shouldFail (func, msg) {
   it('should fail with a message', function () {
@@ -15,7 +15,7 @@ function shouldFail (func, msg) {
   })
 }
 
-describe('dirty chai', function () {
+describe('parentheses', function () {
   describe('ok', function () {
     describe('when true expression', function () {
       it('should not assert function', function () {

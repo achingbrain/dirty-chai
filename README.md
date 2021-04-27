@@ -1,21 +1,24 @@
-dirty-chai
+chai-parentheses
 ==========
+
+> API-compatible fork of dirty-chai as it has problems working with modern bundlers
+
 Function form for terminating assertion properties.
 
 ## Install
 ```
-npm install dirty-chai --save-dev
+npm install chai-parentheses --save-dev
 ```
 ## Usage
 
-`dirty-chai` is a chai [plugin](http://chaijs.com/plugins).
+`chai-parentheses` is a chai [plugin](http://chaijs.com/plugins).
 
 ```js
 var chai = require('chai');
-var dirtyChai = require('dirty-chai');
+var parentheses = require('chai-parentheses');
 var expect = chai.expect
 
-chai.use(dirtyChai);
+chai.use(parentheses);
 // ...
 expect(true).to.be.true();
 ```
@@ -68,23 +71,23 @@ myArray.should.have.length(3);
 
 ### use with chai-as-promised
 
-If you're using chai-as-promised, you should `.use` chai-as-promised before dirty-chai:
+If you're using chai-as-promised, you should `.use` chai-as-promised before chai-parentheses:
 
 ```js
 var chai = require("chai");
 var chaiAsPromised = require("chai-as-promised");
-var dirtyChai = require("dirty-chai");
+var parentheses = require("chai-parentheses");
 
 
 chai.use(chaiAsPromised);
-chai.use(dirtyChai);
+chai.use(parentheses);
 ```
 
 ## Plugin Assertions
 
-This plugin will also hook and convert any property assertions added by other Chai plugins. The only thing you need to do is make sure to load dirty-chai before any other plugins so that it can get its hooks in place before the other plugins are loaded.
+This plugin will also hook and convert any property assertions added by other Chai plugins. The only thing you need to do is make sure to load chai-parentheses before any other plugins so that it can get its hooks in place before the other plugins are loaded.
 
-For example, if you load [sinon-chai](https://github.com/domenic/sinon-chai) after dirty-chai, all of its property assertions will now be method assertions.
+For example, if you load [sinon-chai](https://github.com/domenic/sinon-chai) after chai-parentheses, all of its property assertions will now be method assertions.
 
 ```js
 spy.should.have.been.called();
@@ -94,7 +97,7 @@ spy.should.have.been.calledTwice();
 
 ## Why?
 
-[Chai](https://github.com/chaijs/chai) is probably one of the most popular assertion libraries in the node. It has over 400 dependents and is downloaded almost 500,000/month. 
+[Chai](https://github.com/chaijs/chai) is probably one of the most popular assertion libraries in the node. It has over 400 dependents and is downloaded almost 500,000/month.
 
 For stylistic reasons, Chai was designed so that any assertions that did not require parameters would simply assert on property access. This allowed those assertions to elide the empty parens that would be required if those assertions were methods.
 
